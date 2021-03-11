@@ -1,0 +1,15 @@
+-Gravar saídas em um arquivo txt
+    > pip freeze > requirements.txt
+
+-Instalar libs do arquivo requirements.txt
+    > pip install -r requirements.txt
+
+*observar para outros tipos de banco. O usado no projeto foi o SQLITE
+-Cria a pasta migrations
+    > python run.py db init
+
+-Para migrar e analisar as informações
+    > python run.py db migrate
+
+-Atualiza o banco com as tabelas
+    > python run.py db upgrade
