@@ -23,9 +23,6 @@ docs/_build/
 .vscode
 migrations/
 
-# Windows thumbnail db
-Thumbs.db
-
 # Coverage reports
 htmlcov/
 .coverage
