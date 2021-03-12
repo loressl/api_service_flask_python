@@ -9,7 +9,8 @@ class User(db.Model):
     password = db.Column(db.String)
     name = db.Column(db.String)
     email = db.Column(db.String, unique=True)
-    posts = db.relationship('Post', backref='user', uselist= True, order_by="Post.id")
+    posts = db.relationship('Post', backref='user',
+                            uselist=True, order_by="Post.id")
 
     def __init__(self, username, password, name, email):
         self.username = username
@@ -35,12 +36,10 @@ class Post(db.Model):
     def __repr__(self):
         return "<Post %r>" % self.id
 
-
-class Follow(db.Model):
-    __tablename__ = "follow"
-
-    id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-    follower_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-
-
+    @property
+    def serialize(self):
+        return {
+            'id': self.id,
+            'content': self.content,
+            'user_id': self.user_id
+        }
