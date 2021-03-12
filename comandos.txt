@@ -13,3 +13,6 @@
 
 -Atualiza o banco com as tabelas
     > python run.py db upgrade
+
+-Rodar servidor
+    >python run.py runserver
