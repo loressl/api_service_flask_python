@@ -33,6 +33,9 @@ db.sqlite3-journal
 instance/
 .webassets-cache
 
+# Django stuff:
+*.log
+db.sqlite3
 storage.db
 
 # Coverage reports
