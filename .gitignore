@@ -33,8 +33,7 @@ db.sqlite3-journal
 instance/
 .webassets-cache
 
-# Windows thumbnail db
-Thumbs.db
+storage.db
 
 # Coverage reports
 htmlcov/
