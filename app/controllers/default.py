@@ -126,18 +126,3 @@ def delete_post(user):
     db.session.commit()
     return make_response(jsonify({"mensagem": "Post deletado com sucesso!!"}), 200)
 
-# @app.route("/test", defaults={'name': None}, methods=['GET'])
-# @app.route("/test/<name>")
-# def test( name):
-#     if name:
-#         return "Olá, %s!" % name
-#     else:
-#         return "Olá, user!"
-
-
-# @app.route("/tests", methods=['GET'])
-# @token_required
-# def tests(user):
-#     content = request.json
-#     print(content['id'])
-#     return "ok"
